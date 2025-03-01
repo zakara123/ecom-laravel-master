@@ -75,12 +75,24 @@
 
         <!-- Mobile Menu Button (Visible on small screens) -->
         <div class="block lg:hidden">
-            <button id="mobile-menu-button" class="btn-secondary p-2 rounded-lg focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
+            <div class="flex items-center gap-3">
+                <div x-data="{ open: false }" class="mx-2">
+                    <a href="{{ route('cart') }}" role="button" class="relative flex"
+                        @click="{{ 'open = false' }}">
+                        <i class='bx bxs-shopping-bag' style="font-size: 25px"></i>
+                        <span
+                            class="absolute right-0 top-0 bg-gray-400 rounded-full w-4 h-4 top right p-0 m-0 text-white font-mono text-sm  leading-tight text-center"
+                            style="margin-top: -3px;margin-right: -10px;">{{ count($carts) }}
+                        </span>
+                    </a>
+                </div>
+                <button id="mobile-menu-button" class="btn-secondary p-2 rounded-lg focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
         </div>
 
         <!-- Part 2: Phone, Hours, Address (Hidden on small screens) -->
@@ -192,17 +204,7 @@
                                 <div x-data="{ open: false }" class="mx-2">
                                     <a href="{{ route('cart') }}" role="button" class="relative flex"
                                         @click="{{ 'open = false' }}">
-                                        <svg width="15" height="17" viewBox="0 0 15 17" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.23535 9.82878V2.48418C6.23535 1.36893 7.13944 0.464844 8.25469 0.464844V0.464844C9.36994 0.464844 10.274 1.36893 10.274 2.48418V3.79284"
-                                                stroke="currentColor" stroke-width="0.809698"
-                                                stroke-linecap="square"></path>
-                                            <path
-                                                d="M7.89644 5.44922H12.7474C13.0913 5.44922 13.378 5.71232 13.4075 6.05493L14.2309 15.6281C14.2641 16.0149 13.9591 16.3473 13.5708 16.3473H1.96995C1.58168 16.3473 1.27664 16.0149 1.30991 15.6281L2.13329 6.05493C2.16276 5.71232 2.44946 5.44922 2.79334 5.44922H4.50922"
-                                                stroke="currentColor" stroke-width="0.809698"
-                                                stroke-linecap="square"></path>
-                                        </svg>
+                                        <i class='bx bxs-shopping-bag'></i>
                                         <span
                                             class="absolute right-0 top-0 bg-gray-400 rounded-full w-4 h-4 top right p-0 m-0 text-white font-mono text-sm  leading-tight text-center"
                                             style="margin-top: -3px;margin-right: -10px;">{{ count($carts) }}
