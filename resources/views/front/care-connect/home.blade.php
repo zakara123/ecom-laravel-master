@@ -90,7 +90,7 @@
                 @foreach ($homeComponentName1 as $item)
                     @foreach ($item->slider_items as $index => $sliderItem)
                         <div class="{{ $index === 0 ? '' : 'hidden' }} duration-700 ease-in-out" data-carousel-item>
-                            <img src="{{url('temp-images/slider.webp')}}"
+                            <img src="{{ $sliderItem->image }}"
                                 class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                                 alt="{{ $sliderItem->title }}">
                             <div class="absolute bottom-20 left-20 text-white">

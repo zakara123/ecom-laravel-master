@@ -67,7 +67,7 @@
         <!-- Part 1: Logo -->
         <div class="lg:w-1/4 flex items-center justify-center lg:justify-start md:ml-8">
             @if (isset($company->logo) && !empty(@$company->logo))
-                <img src="{{url('temp-images/logo.png')}}" alt="logo" class="w-60 h-[80px] lg:h-[60px] object-contain">
+                <img src="{{ asset(@$company->logo) }}" alt="logo" class="w-60 h-[80px] lg:h-[60px] object-contain">
             @else
                 <img src="{{ asset('front/img/ECOM_L.png') }}" alt="logo" class="w-60">
             @endif
@@ -212,9 +212,6 @@
                             @endif
 
                             {{-- ends --}}
-
-
-
                         </ul>
                     </nav>
                 @endif
@@ -256,6 +253,7 @@
                     @endforeach
                 @endif
             @endif
+
             <li class="flex items-center">
                 <!-- Search Input with Icon and Button -->
                 <div class="relative flex items-center border border-white rounded-md w-full">
