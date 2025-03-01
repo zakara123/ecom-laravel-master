@@ -44,7 +44,7 @@
     content: '';
     display: block;
     height: 3px; /* Thickness of the underline */
-    background-color: #2A5A56; /* Underline color */
+    background-color: #00E1B7; /* Underline color */
     position: absolute;
     left: 0;
     right: 0;
@@ -55,7 +55,7 @@
 }
 
 .menu-item:hover {
-    color: #2A5A56; /* Text color on hover */
+    color: #00E1B7; /* Text color on hover */
 }
 
 .menu-item:hover::after {

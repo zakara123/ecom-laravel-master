@@ -171,7 +171,7 @@
 </style>
 
 @section('content')
-    <div class="main-page-content container mx-auto mt-4 px-5 mx-auto sm:px-4 md:px-14 lg:px-14 xl:px-14 2xl:px-14"style="flex-grow:1; margin-top:-3px">
+    <div class="main-page-content container mx-auto mt-4 mx-auto sm:px-0 md:px-14 lg:px-14 xl:px-14 2xl:px-14"style="flex-grow:1; margin-top:-3px">
         <div class="text-center text-xl mb-4 text-sm color-ki sm:text-center dark:text-gray-400" style="background: #F7F5F1;padding:36px">Terms and Conditions
         <p class="text-md min-h-max mt-2 " style="background: #F7F5F1;margin-top:-36px">
             @if (isset($terms_conditions->key))

@@ -126,14 +126,14 @@
     </div>
 
     <!-- Section 1: Welcome Section -->
-    <section class=" py-20 text-center bg-white">
+    <section class="text-center bg-white">
         <h3 class="mt-10 text-sm uppercase tracking-wider font-medium text-gray-500 mb-6">
             Welcome to Care Connect
         </h3>
         <p class="text-2xl md:text-4xl font-semibold text-gray-800 max-w-4xl lg:mx-auto mx-8  leading-relaxed">
             Your trusted one-stop shop for scheduling medical appointments and finding the right medical equipment for purchase or rental.<br />We're here to make your healthcare journey easier!
         </p>
-        <div class="flex justify-center mt-6">
+        <div class="flex justify-center my-10">
             <img src="https://careconnect.living/files/logo/care-connect-ltd-logo-1731177761671.png" alt="Care Connect Logo"
                 class="h-12">
         </div>
@@ -141,7 +141,7 @@
 
 
     <!-- Section 2: Areas of Specialty -->
-    <section class="py-20 bg-white">
+    <section class="bg-white">
         <h2 class="text-center mx-8 lg:mx-auto text-3xl md:text-4xl font-semibold text-gray-800 mb-12">
             We can help you with the following conditions:
         </h2>

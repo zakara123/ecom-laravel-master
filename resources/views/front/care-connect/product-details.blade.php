@@ -371,7 +371,7 @@
             @endif
             <section class="text-gray-700 body-font overflow-hidden ">
                 <div class="container px-5 pt-8 mx-auto sm:px-4 md:px-12 lg:px-12 xl:px-12 2xl:px-12">
-                    <div class="lg:w-full mx-auto flex flex-wrap py-14">
+                    <div class="lg:w-full mx-auto flex flex-wrap py-0">
                         <div class="lg:w-1/2 pswp-gallery my-gallery" style="cursor: zoom-in;" id="forcedgallery">
                             <div class="product__thumbs product__thumbs--beside product__thumbs-placement--left float-left hidden_mobile"
                                 style="margin: 0 10px;">
@@ -383,7 +383,7 @@
                                                 data-src_target="item-image-{{ $i }}"
                                                 data-thumb_swipe="{{ $i }}">
                                                 <img src="{{ $image->src }}" alt="{{ $product->name }}" width="300"
-                                                    height="300" style="border-radius: 20px;">
+                                                    height="300" style="border-radius: 10px;">
                                             </div>
                                             @php $i++ @endphp
                                         @endforeach
