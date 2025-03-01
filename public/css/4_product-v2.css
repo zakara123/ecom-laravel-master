@@ -1,0 +1,17 @@
+/* --------------------------------
+
+File#: 4_product-v2
+Title: Product v2
+Descr: Product info section with CTA
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.product-v2 .thumbslide {
+  --thumbslide-thumbnail-auto-size: 90px;
+  --thumbslide-thumbnail-grid-gap: 0.25rem;
+}
+@media (min-width: 64rem) {
+  .product-v2 .thumbslide {
+    --thumbslide-thumbnail-grid-gap: 0.375rem;
+  }
+}

@@ -1,0 +1,145 @@
+/* --------------------------------
+
+File#: 1_slider
+Title: Slider
+Descr: Slider element for choosing numbers between a min and a max value
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+  --slider-width: 200px;
+  --slider-track-height: 8px;
+  --slide-thumb-size: 20px;
+}
+
+.slider {
+  position: relative;
+  width: var(--slider-width);
+}
+
+.slider__range {
+  width: 100%;
+  --slider-fill-value: 0%;
+  --slider-empty-value: 100%;
+}
+
+.slider__input {
+  display: block;
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+.slider__input:focus {
+  outline: none;
+}
+
+.slider__input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: var(--slide-thumb-size);
+  height: var(--slide-thumb-size);
+  border-radius: 50%;
+  border: none;
+  @apply bg-white;
+  box-shadow: 0 0.1px 0.3px rgba(0, 0, 0, 0.06),0 1px 2px rgba(0, 0, 0, 0.12), 0 0.3px 0.4px rgba(0, 0, 0, 0.025),0 0.9px 1.5px rgba(0, 0, 0, 0.05),0 3.5px 6px rgba(0, 0, 0, 0.1);
+  cursor: -webkit-grab;
+  cursor: grab;
+  margin-top: calc((var(--slider-track-height) - var(--slide-thumb-size))*0.5);
+}
+
+.slider__input:active::-webkit-slider-thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.slider__input::-moz-range-thumb {
+  width: var(--slide-thumb-size);
+  height: var(--slide-thumb-size);
+  border-radius: 50%;
+  border: none;
+  @apply bg-white;
+  box-shadow: 0 0.1px 0.3px rgba(0, 0, 0, 0.06),0 1px 2px rgba(0, 0, 0, 0.12), 0 0.3px 0.4px rgba(0, 0, 0, 0.025),0 0.9px 1.5px rgba(0, 0, 0, 0.05),0 3.5px 6px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+}
+
+.slider__input:active::-moz-range-thumb {
+  cursor: grabbing;
+}
+
+.slider__input:active::-ms-thumb {
+  cursor: grabbing;
+}
+
+.slider__input:focus::-webkit-slider-thumb {
+  box-shadow: 0 0.1px 0.3px rgba(0, 0, 0, 0.06),0 1px 2px rgba(0, 0, 0, 0.12), 0 0.3px 0.4px rgba(0, 0, 0, 0.025),0 0.9px 1.5px rgba(0, 0, 0, 0.05),0 3.5px 6px rgba(0, 0, 0, 0.1), 0 0 0 3px hsla(var(--color-primary) / 0.2), 0 0.9px 1.5px rgba(0, 0, 0, 0.03), 0 3.1px 5.5px rgba(0, 0, 0, 0.08), 0 14px 25px rgba(0, 0, 0, 0.12);
+}
+
+.slider__input:focus::-moz-range-thumb {
+  box-shadow: 0 0.1px 0.3px rgba(0, 0, 0, 0.06),0 1px 2px rgba(0, 0, 0, 0.12), 0 0.3px 0.4px rgba(0, 0, 0, 0.025),0 0.9px 1.5px rgba(0, 0, 0, 0.05),0 3.5px 6px rgba(0, 0, 0, 0.1), 0 0 0 3px hsla(var(--color-primary) / 0.2), 0 0.9px 1.5px rgba(0, 0, 0, 0.03), 0 3.1px 5.5px rgba(0, 0, 0, 0.08), 0 14px 25px rgba(0, 0, 0, 0.12);
+}
+
+.slider__input::-webkit-slider-runnable-track {
+  height: var(--slider-track-height);
+  border-radius: 50em;
+  background-image: linear-gradient(to right, hsl(var(--color-primary)) var(--slider-fill-value), hsl(var(--color-contrast-lower)) var(--slider-fill-value), hsl(var(--color-contrast-lower)) var(--slider-empty-value));
+  margin-top: calc((var(--slide-thumb-size) - var(--slider-track-height))*0.5);
+}
+
+.slider__input::-moz-range-track {
+  height: var(--slider-track-height);
+  border-radius: 50em;
+  background-image: linear-gradient(to right, hsl(var(--color-primary)) var(--slider-fill-value), hsl(var(--color-contrast-lower)) var(--slider-fill-value), hsl(var(--color-contrast-lower)) var(--slider-empty-value));
+}
+
+.slider__input::-moz-focus-outer {
+  border: 0;
+}
+
+.slider__input::-ms-tooltip {
+  display: none;
+}
+
+.slider__input::-ms-thumb {
+  width: var(--slide-thumb-size);
+  height: var(--slide-thumb-size);
+  border-radius: 50%;
+  border: none;
+  @apply bg-white;
+  box-shadow: 0 0.1px 0.3px rgba(0, 0, 0, 0.06),0 1px 2px rgba(0, 0, 0, 0.12), 0 0.3px 0.4px rgba(0, 0, 0, 0.025),0 0.9px 1.5px rgba(0, 0, 0, 0.05),0 3.5px 6px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+  transform: translateY(0);
+  background-color: white !important;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.1);
+  height: 20px;
+  width: 20px;
+}
+
+.slider__input:focus::-ms-thumb {
+  box-shadow: inset 0 0 0 2px rgba(42, 109, 244, 0.2);
+}
+
+.slider__input::-ms-track {
+  height: var(--slider-track-height);
+  border-radius: 50em;
+  background-image: linear-gradient(to right, hsl(var(--color-primary)) var(--slider-fill-value), hsl(var(--color-contrast-lower)) var(--slider-fill-value), hsl(var(--color-contrast-lower)) var(--slider-empty-value));
+  background-color: #98989a;
+  color: transparent;
+  height: 8px;
+}
+
+.slider--floating-value .slider__value {
+  position: absolute;
+  top: -1.25rem;
+  left: var(--slide-thumb-size);
+  transform: translateX(-50%);
+  @apply text-sm lg:text-base;
+}
+@media (min-width: 64rem) {
+  .slider--floating-value .slider__value {
+    top: -2rem;
+  }
+}
+
+.slider--range-not-supported .slider__value {
+  display: none;
+}

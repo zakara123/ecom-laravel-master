@@ -1,0 +1,18 @@
+.orange-toast-container {
+    background-color: #f5a623; /* Light orange background */
+    color: white;
+}
+
+.orange-toast-icon {
+    background-color: #f57c00; /* Darker orange for the icon */
+    color: white;
+}
+
+.orange-toast-close-btn {
+    background-color: #f57c00; /* Darker orange for the close button */
+    color: white;
+}
+
+.orange-toast-close-btn:hover {
+    background-color: #e67e22; /* Slightly darker on hover */
+}

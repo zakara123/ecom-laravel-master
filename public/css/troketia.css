@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'IntroRegularAlt';
+    src: url('../font-intro/intro-regular-alt.otf ') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.main-button::before,
+.main-button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    /* Thickness of the line */
+    background-color: white;
+    /* Color of the line */
+}
+
+.main-button::before {
+    top: 3px;
+    /* Position above the button */
+}
+
+.main-button {
+    background-color: #f38a73 !important;
+        /* Position above the button */
+}
+
+.main-button::after {
+    bottom: 3px;
+    /* Position below the button */
+}
+
+body {
+    max-width: 1800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #F7F5F1 !important
+}
+
+.bg-white {
+    background: #F7F5F1 !important
+}
+
+
+
+/* *,
+body {
+    font-family: 'IntroRegularAlt', sans-serif !important;
+} */

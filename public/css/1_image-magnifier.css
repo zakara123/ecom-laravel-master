@@ -1,0 +1,17 @@
+/* --------------------------------
+
+File#: 1_image-magnifier
+Title: Image Magnifier
+Descr: Plugin to create a magnifying effect on an image
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.img-mag {
+  overflow: hidden;
+}
+
+.img-mag__asset {
+  display: block;
+  width: 100%;
+  -webkit-transform-origin: left top;transform-origin: left top;
+}

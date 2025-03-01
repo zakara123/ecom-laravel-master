@@ -1,0 +1,83 @@
+/* --------------------------------
+
+File#: 1_menu
+Title: Menu
+Descr: Application menu that provides access to a set of functionalities
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.menu {
+  --menu-vertical-gap: 4px;
+  /* vertical gap between the Menu element and its control */
+  --menu-item-padding: 0.25rem 0.5rem;
+  list-style: none;
+  user-select: none;
+  position: fixed;
+  /* top/left position set in JS */
+  @apply z-5;
+  width: 220px;
+  @apply bg-floor-light;
+  @apply shadow-inner-md;
+  @apply py-1.5 lg:py-2 px-0;
+  @apply rounded;
+  margin-top: var(--menu-vertical-gap);
+  margin-bottom: var(--menu-vertical-gap);
+  overflow: auto;
+  @apply text-base;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.2s, opacity 0.2s;
+}
+@media (min-width: 64rem) {
+  .menu {
+    --menu-item-padding: 0.375rem 0.75rem;
+  }
+}
+
+.menu--is-visible {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.2s;
+}
+
+.menu--overlay {
+  @apply z-15;
+}
+
+.menu__content {
+  display: flex;
+  align-items: center;
+  padding: var(--menu-item-padding);
+  text-decoration: none;
+  /* reset link style */
+  @apply text-contrast-high;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: 0.2s;
+}
+.menu__content:hover {
+  @apply bg-contrast-higher/7;
+}
+.menu__content:focus {
+  outline: none;
+  @apply bg-primary/15;
+}
+
+.menu__label {
+  padding: var(--menu-item-padding);
+  @apply text-sm;
+  @apply text-contrast-medium;
+}
+
+.menu__separator {
+  height: 1px;
+  @apply bg-contrast-lower;
+  margin: var(--menu-item-padding);
+}
+
+.menu__icon {
+  @apply text-contrast-higher/50;
+  @apply mr-1.5 lg:mr-2;
+}

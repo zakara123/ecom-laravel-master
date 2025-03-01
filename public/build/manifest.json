@@ -1,0 +1,22 @@
+{
+  "resources/js/app.js": {
+    "file": "assets/app.39c66041.js",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/css/care-connect.css": {
+    "file": "assets/care-connect.cc3a34f4.css",
+    "src": "resources/css/care-connect.css",
+    "isEntry": true
+  },
+  "resources/css/troketia.css": {
+    "file": "assets/troketia.cc3a34f4.css",
+    "src": "resources/css/troketia.css",
+    "isEntry": true
+  },
+  "resources/css/app.css": {
+    "file": "assets/app.cc3a34f4.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  }
+}

@@ -1,0 +1,27 @@
+/node_modules
+# /public/build
+/public/phpmyadmin
+/public/files
+/public/hot
+/public/storage
+/public/pdf
+/public/pdf_attachments
+/storage/*.key
+/vendor
+.env
+composer.lock
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+error_log
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
+/storage/*
+storage/
+storage/**/log/
+storage/**/framework/views/*
+monarx-analyzer.php

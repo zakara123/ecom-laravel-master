@@ -1,0 +1,108 @@
+/* --------------------------------
+
+File#: 1_btns
+Title: Buttons (Group)
+Descr: Group of connected buttons
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+  --btns-button-padding-x: 0.75rem;
+  --btns-button-padding-y: 0.375rem;
+}
+@media (min-width: 64rem) {
+  :root {
+    --btns-button-padding-x: 1.125rem;
+    --btns-button-padding-y: 0.5625rem;
+  }
+}
+
+.btns {
+  /* button group */
+}
+
+/* single button */
+.btns__btn {
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  line-height: inherit;
+  appearance: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: var(--btns-button-padding-y) var(--btns-button-padding-x);
+  @apply bg-contrast-higher/10;
+  transition: 0.2s;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.btns__btn:hover:not(.btns__btn--selected) {
+  @apply bg-contrast-higher/7;
+}
+.btns__btn:focus {
+  z-index: 1;
+  outline: none;
+  box-shadow: 0 0 0 2px hsla(var(--color-contrast-higher) / 0.2);
+}
+
+.btns__btn--selected, .btns--radio input[type=radio]:checked + label,
+.btns--radio input[type=checkbox]:checked + label, .btns--checkbox input[type=radio]:checked + label,
+.btns--checkbox input[type=checkbox]:checked + label {
+  /* selected style */
+  @apply bg-contrast-higher;
+  @apply text-floor;
+  @apply shadow;
+}
+
+.btns__btn--disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+/* --radio, --checkbox */
+.btns--radio > *, .btns--checkbox > * {
+  position: relative;
+}
+.btns--radio input[type=radio],
+.btns--radio input[type=checkbox], .btns--checkbox input[type=radio],
+.btns--checkbox input[type=checkbox] {
+  /* hide native buttons */
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+}
+.btns--radio input[type=radio] + label,
+.btns--radio input[type=checkbox] + label, .btns--checkbox input[type=radio] + label,
+.btns--checkbox input[type=checkbox] + label {
+  user-select: none;
+}
+.btns--radio input[type=radio]:focus + label,
+.btns--radio input[type=checkbox]:focus + label, .btns--checkbox input[type=radio]:focus + label,
+.btns--checkbox input[type=checkbox]:focus + label {
+  z-index: 1;
+  box-shadow: 0 0 0 2px hsla(var(--color-contrast-higher) / 0.2);
+}
+.btns--radio input[type=radio]:checked + label,
+.btns--radio input[type=checkbox]:checked + label, .btns--checkbox input[type=radio]:checked + label,
+.btns--checkbox input[type=checkbox]:checked + label {
+  /* checked state */
+}
+
+.btns__btn--icon {
+  padding: var(--btns-button-padding-y);
+}
+.btns__btn--icon .icon {
+  display: block;
+}
