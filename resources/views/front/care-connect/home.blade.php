@@ -84,15 +84,18 @@
 
     </style>
 
-    <div class=" bg-white carousel-container" style="margin-top: -46px">
+    <div class=" bg-white carousel-container" style="margin-top: -31px">
         <div id="default-carousel" class="relative w-full" data-carousel="slide">
             <div class="relative overflow-hidden rounded-lg" style="aspect-ratio: 2;">
                 @foreach ($homeComponentName1 as $item)
                     @foreach ($item->slider_items as $index => $sliderItem)
                         <div class="{{ $index === 0 ? '' : 'hidden' }} duration-700 ease-in-out" data-carousel-item>
-                            <img src="{{ $sliderItem->image }}"
+                            <img src="{{ url('files/homecarousel/homeslider-173705833465.webp') }}"
                                 class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                                 alt="{{ $sliderItem->title }}">
+                            {{-- <img src="{{ $sliderItem->image }}"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="{{ $sliderItem->title }}"> --}}
                             <div class="absolute bottom-20 left-20 text-white">
                                 <h2 class="text-lg md:text-2xl  font-bold"
                                     style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);">

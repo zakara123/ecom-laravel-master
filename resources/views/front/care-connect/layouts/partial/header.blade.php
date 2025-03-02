@@ -62,14 +62,14 @@
 </div>
 
 <!-- Header Section -->
-<header class="pt-0 md:pt-7 pb-7 sm:mx-8 mx-2" style="background: white">
+<header class="pt-3 md:pt-7 lg:pt-7 {{ request()->is('/') ? 'pb-7' : 'pb-3' }} md:pb-7 lg:pb-7 sm:mx-8 mx-2" style="background: white">
     <div class="container mx-auto flex justify-between items-center px-2 md:px-4 py-2">
         <!-- Part 1: Logo -->
         <div class="lg:w-1/4 flex items-center justify-center lg:justify-start md:ml-8">
             @if (isset($company->logo) && !empty(@$company->logo))
-                <img src="{{ asset(@$company->logo) }}" alt="logo" class="w-40 lg:w-60 h-[80px] lg:h-[60px] object-contain">
+                <img src="{{ asset(@$company->logo) }}" alt="logo" class="w-40 lg:w-60 lg:h-[60px] object-contain">
             @else
-                <img src="{{ asset('front/img/ECOM_L.png') }}" alt="logo" class="w-60">
+                <img src="{{ asset('front/img/ECOM_L.png') }}" alt="logo" class="w-40">
             @endif
         </div>
 
@@ -87,7 +87,7 @@
                     </a>
                 </div>
                 <button id="mobile-menu-button" class="btn-secondary p-2 rounded-lg focus:outline-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 lg:h-8 lg:w-8" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
